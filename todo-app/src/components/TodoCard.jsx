@@ -1,6 +1,6 @@
-export function TodoCard (props) {
+export function TodoCard(props) {
   const { todo } = props
-   
+
   console.log(todo)
   return (
     <div className="card todo-item">
