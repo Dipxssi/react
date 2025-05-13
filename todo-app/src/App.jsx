@@ -1,5 +1,5 @@
 // a component is a function which returns jsx nd jsx is html thaT HAS JS WRITTEN DIREctly inside it 
-import { useState } from "react"
+import { useState , useEffect } from "react"
 import { Header } from "./components/Header"
 import { Tabs } from "./components/Tabs"
 import { TodoInput } from "./components/TodoInput"
@@ -23,24 +23,43 @@ function App() {
         //...todos spreads the origonal todos or copies and then input property appends the new todo
         const newTodoList = [...todos, {input : newTodo, complete : false}]
         setTodos(newTodoList)
+        handleSaveData(newTodoList)
   }
 
   function handleCompleteTodo (index) {
      //update/edit/modify
-     let newTodoList = []
-  }
+     let newTodoList = [...todos]
+     let completedTodo = todos[index]
+     completedTodo['complete'] = true
+     newTodoList[index] = completedTodo
+     setTodos(newTodoList)
+     handleSaveData(newTodoList)
+   }
   function handleDeleteTodo (index) {
     let newTodoList =  todos.filter((val , valIndex) => {
        return valIndex !== index 
     })
-    setTodos[newTodoList]
+    setTodos(newTodoList)
+    handleSaveData(newTodoList)
   }
+
+  function handleSaveData(currentTodos){
+    localStorage.setItem('todo-app',JSON.stringify({ todos: currentTodos }))
+  }
+
+  useEffect (( ) => {
+     const data = localStorage.getItem('todo-app')
+     if (data) {
+      const db = JSON.parse(data)
+      setTodos(db.todos)
+  }
+  } ,[])
 
   return ( //react fragment <> where we can wrap our code
     <>
       <Header todos={todos} />
-      <Tabs SelectedTab = {selectedTab} setSelectedTab= {setSelectedTab} todos={todos} />
-      <TodoList  handleDeleteTodo = {handleDeleteTodo} todos={todos} selectedTab={selectedTab} />
+      <Tabs selectedTab = {selectedTab} setSelectedTab= {setSelectedTab} todos={todos} />
+      <TodoList handleCompleteTodo = {handleCompleteTodo} handleDeleteTodo = {handleDeleteTodo} todos={todos} selectedTab={selectedTab} />
       <TodoInput handleAddTodo = {handleAddTodo}/>
 
     </>
