@@ -16,6 +16,7 @@ function App() {
   const [todos, setTodos] = useState([
     { input: 'Hello! Add your first todo !', complete: true }
   ])
+  const [selectedTab , setSelectedTab] = useState('Open')
 
   function handleAddTodo (newTodo) {
         //duplicate  the copy and completely overwrite
@@ -24,18 +25,22 @@ function App() {
         setTodos(newTodoList)
   }
 
-  function handleEditTodo(){
-
+  function handleCompleteTodo (index) {
+     //update/edit/modify
+     let newTodoList = []
   }
-  function handleDeleteTodo () {
-
+  function handleDeleteTodo (index) {
+    let newTodoList =  todos.filter((val , valIndex) => {
+       return valIndex !== index 
+    })
+    setTodos[newTodoList]
   }
 
   return ( //react fragment <> where we can wrap our code
     <>
       <Header todos={todos} />
-      <Tabs todos={todos} />
-      <TodoList todos={todos} />
+      <Tabs SelectedTab = {selectedTab} setSelectedTab= {setSelectedTab} todos={todos} />
+      <TodoList  handleDeleteTodo = {handleDeleteTodo} todos={todos} selectedTab={selectedTab} />
       <TodoInput handleAddTodo = {handleAddTodo}/>
 
     </>
