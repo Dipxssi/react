@@ -1,0 +1,44 @@
+body{
+  background-color: #282D35;
+  font-family: 'Inter','Roboto',sans-serif;
+  color: white;
+  margin: 0;
+   background-image: url(background-react.png);
+  background-repeat: no-repeat;
+}
+.image{
+  width: 60px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 12px;
+}
+.nav-bar{
+  background-color: rgb(7, 7, 7);
+  color: rgb(97, 218, 251);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+nav > span {
+  font-size:1.4 rem;
+  font-weight:700;
+}
+
+main > h1{
+  margin-left: 20px;
+  font-size: 2.4rem;
+}
+
+.fact-list{
+  margin-top: 46px;
+  max-width: 400px;
+}
+.fact-list > li{
+  margin-block: 20px;
+  line-height: 19px;
+}
+
+.fact-list > li::marker{
+  color: rgb(97, 218, 251);
+  font-size: 1.5rem;
+}
