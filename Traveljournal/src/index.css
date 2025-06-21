@@ -1,0 +1,17 @@
+body{
+  background-color:bisque;
+  font-family: 'Inter','Roboto',sans-serif;
+  margin: 0px;
+}
+header > nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 31, 31);
+  height: 80px;
+}
+header > nav > h1{
+  color: white;
+  font-weight: 300;
+  margin : 0;
+}
