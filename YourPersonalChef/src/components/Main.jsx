@@ -8,9 +8,7 @@ const [ingredients , setIngredients]=React.useState([])
  ))
 
 
- function handleSubmit(event){
-  event.preventDefault()
-  const formData = new FormData(event.currentTarget)
+ function addIngredient(formData){
   const newIngredient = formData.get("ingredient")//form name here 
   setIngredients(prevIngredient=> ( [...prevIngredient,newIngredient]))
  }
@@ -18,7 +16,7 @@ const [ingredients , setIngredients]=React.useState([])
 
   return (
     <main>
-      <form className="add-ingredient-form" onSubmit={handleSubmit}>
+      <form action={addIngredient}className="add-ingredient-form" >
         <input 
         type = "text"
         placeholder="e.g. salt"
