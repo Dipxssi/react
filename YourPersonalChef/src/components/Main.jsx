@@ -29,6 +29,7 @@ export default function Main() {
       <section>
         <h2>Ingredients on hand:</h2>
         <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
+        {ingredients.length > 3 && 
         <div className="get-recipe-container">
           <div>
             <h3>Ready for a recipe?</h3>
@@ -36,6 +37,7 @@ export default function Main() {
           </div>
           <button>Get a recipe</button>
         </div>
+        }
       </section>
       )}
     </main>
