@@ -1,7 +1,4 @@
-export default function ingredientList (props){
-   function toggleRecipeShown(){
-    props.setRecipeShown( prevShown => !prevShown)
-  }
+export default function IngredientList (props){
 
   const ingredientsListItems = props.ingredients.map(ingredient => (
     <li key={ingredient}>{ingredient}</li>
@@ -16,7 +13,7 @@ export default function ingredientList (props){
                 <h3>Ready for a recipe?</h3>
                 <p>Generate a recipe from your list of ingredients.</p>
               </div>
-              <button onClick={toggleRecipeShown}>Get a recipe</button>
+              <button onClick={props.getRecipe}>Get a recipe</button>
             </div>
           }
         </section>
