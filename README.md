@@ -6,22 +6,22 @@ This repository is a curated collection of **mini React projects**, each organiz
 
 Each folder contains a self-contained project. Here's what you'll find:
 
-### 🌐 1. `static-web-page/`
+### 🌐 1. `static-web-page`
 A responsive, static single-page website built using React components. Great for understanding layout and basic component structure.  
 **Tech Used:** Component reuse, layout with CSS
 
-### 🧳 2. `travel-journal/`
+### 🧳 2. `travel-journal`
 A static travel journal layout that displays a list of travel destinations with photos and descriptions.  
 **Tech Used:** JSX, component props, styling
 
-### 📝 3. `todo-app/`
+### 📝 3. `todo-app`
 A simple To-Do List that lets users:
 - Add tasks
 - Mark tasks as completed
 - Delete tasks  
 **Tech Used:** React state, props, event handling, conditional rendering
 
-🍳 **4. yourpersonalchef/**  
+🍳 **4. yourpersonalchef**  
 An AI-powered recipe generator where users input a list of ingredients and get personalized recipe suggestions in real-time using Hugging Face models.  
 
 **Features:**
