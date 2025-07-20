@@ -33,6 +33,19 @@ An AI-powered recipe generator where users input a list of ingredients and get p
 **Tech Used:**  
 React state & conditional rendering, API integration (Hugging Face Inference API), environment variables, dynamic UI updates
 
+### 😂 5. `meme-generator`  
+A dynamic meme generator that fetches random meme templates from an external API and lets users add custom top and bottom text.
+
+**Features:**
+- Fetches meme images from the Imgflip public API  
+- Users can generate a new meme template with a button click  
+- Real-time updates to top and bottom text  
+- Layered text on top of images like classic meme formats  
+
+**Tech Used:**  
+React `useState` and `useEffect`, API fetching with `fetch()`, controlled inputs, event handling, conditional rendering
+
+
 
 ## **Tech Stack**
 React.js
