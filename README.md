@@ -21,7 +21,7 @@ A simple To-Do List that lets users:
 - Delete tasks  
 **Tech Used:** React state, props, event handling, conditional rendering
 
-🍳 **4. yourpersonalchef**  
+### 🍳 4. `yourpersonalchef`  
 An AI-powered recipe generator where users input a list of ingredients and get personalized recipe suggestions in real-time using Hugging Face models.  
 
 **Features:**
