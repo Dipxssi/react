@@ -52,7 +52,7 @@ React.js
 
 JavaScript (ES6+)
 
-Vite / Create React App
+Vite 
 
 HTML + CSS
 
